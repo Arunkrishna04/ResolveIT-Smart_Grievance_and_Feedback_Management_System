@@ -1,118 +1,175 @@
-# ResolveIT-Smart_Grievance_and_Feedback_Management_System
-ResolveIT is a full-stack web application designed to simplify how organizations manage complaints. It provides a structured system where users can raise issues, staff can process them efficiently, and administrators can monitor overall performance — all in one place.
+# ResolveIT – Smart Grievance Management System
 
-The platform focuses on transparency, accountability, and faster resolution through role-based access, real-time updates, and performance tracking.
+ResolveIT is a full-stack web application designed to streamline complaint handling within organizations. It enables users to submit issues, staff to resolve them efficiently, and administrators to monitor, assign, and escalate complaints through a structured workflow.
 
-#🌐 Overview
-Managing complaints manually can lead to delays, confusion, and lack of accountability. ResolveIT solves this by offering a centralized system that tracks every complaint from submission to closure.
+The system emphasizes transparency, real-time tracking, and efficient resolution with role-based dashboards and analytics.
 
-It ensures:
+---
 
-Clear ownership of tasks
-Transparent status tracking
-Timely resolution through SLA monitoring
-Insightful analytics for better decision-making
-#✨ Core Features
-👤 User Side
-Submit complaints with detailed descriptions
-Track progress of requests in real-time
-Receive notifications for every update
-Filter and search past complaints
-Provide ratings and feedback after resolution
-👨‍💼 Staff Side
-View assigned complaints in a dedicated dashboard
-Update complaint status and progress
-Monitor deadlines and overdue tasks
-Access complete history of each complaint
-Review feedback given by users
-🛠️ Admin Side
-Manage users and staff accounts
-Assign complaints to staff members
-Monitor all complaints across the system
-View analytics and performance reports
-Track resolution rates and workload distribution
-🏗️ Technology Stack
-Backend: Java, Spring Boot
-Security: Spring Security
-Database: MySQL
-ORM: Hibernate (JPA)
-Frontend: HTML, CSS, JavaScript, Thymeleaf
-Build Tool: Maven
-Version Control: Git & GitHub
-🔐 Access Control
-The system follows role-based authentication:
+## 🌐 Overview
 
-User: Can create and track complaints
-Staff: Handles and resolves assigned issues
-Admin: Full system control and monitoring
-Each role is redirected to a dedicated dashboard after login.
+ResolveIT replaces manual complaint handling with a centralized digital system. It ensures that every complaint is tracked, assigned, and resolved systematically while maintaining complete visibility and accountability.
 
-#🔄 Complaint Lifecycle
-Every complaint passes through multiple stages:
+Key benefits:
 
-New → Initial submission
-Under Review → Being processed by staff
-Resolved → Successfully completed
-Denied → Rejected with reason
-All updates are recorded with timestamps to maintain a complete audit trail.
+* Clear ownership of complaints
+* Real-time status tracking
+* Priority-based handling using urgency levels
+* Manual escalation for critical issues
+* Data-driven insights through analytics
 
-#📊 Key Functional Modules
-📌 Complaint Management
-Handles creation, assignment, and tracking of complaints.
+---
 
-📌 Dashboard System
-Displays real-time statistics based on user roles.
+## ✨ Core Features
 
-📌 Notification System
-Sends updates via email and in-app alerts.
+### 👤 User Features
 
-📌 Feedback Module
-Allows users to rate services and provide comments.
+* Submit complaints with category and detailed description
+* Set urgency level (Low, Medium, High)
+* Option to submit complaints anonymously
+* Upload supporting files (images/documents)
+* Track complaint status in real-time
+* View complete activity timeline
 
-📌 SLA Monitoring
-Tracks resolution time and highlights delays.
+---
 
-#🗄️ Database Design
-The system uses relational tables such as:
+### 👨‍💼 Staff Features
 
-Users (stores account details and roles)
-Complaints (stores issue details and status)
-Complaint History (tracks status changes over time)
-Feedback (stores ratings and comments)
-#🚀 Getting Started
-Prerequisites
-Java 17+
-Maven
-MySQL
-Git
-Steps to Run
-Clone the repository
-Create a MySQL database
-Update database credentials in application properties
-Build the project using Maven
-Run the application
-Access the system at: 👉 http://localhost:8080
+* View and manage assigned complaints
+* Update complaint status (In Progress, Resolved, Escalated)
+* Add updates/comments to complaint timeline
+* Filter complaints by date, urgency, and status
+* Monitor escalated complaints
 
-#⚙️ Configuration
-Make sure to configure:
+---
 
-Database connection
-Server port
-Email settings (optional for notifications)
-#🔒 Security Features
-Password encryption using BCrypt
-Role-based authorization
-CSRF protection enabled
-Secure session-based authentication
-#⚠️ Known Issues & Tips
-Always use separate sessions for testing different roles
-Ensure database is properly connected before running
-Verify role-based redirects after login
-#🚀 Future Improvements
-Real-time updates using WebSockets
-Mobile-friendly responsive design
-AI-based complaint categorization
-Chat system between users and staff
-REST API for mobile integration
-Multi-language support
+### 🛠️ Admin Features
 
+* Assign complaints to staff members
+* Manually escalate complaints when required
+* View all complaints with advanced filtering
+* Monitor system-wide complaint statistics
+* Download reports in CSV format
+* Receive alerts for high-priority and escalated complaints
+
+---
+
+## 🏗️ Technology Stack
+
+* **Backend:** Java, Spring Boot
+* **Security:** Spring Security
+* **Database:** MySQL
+* **ORM:** Hibernate (JPA)
+* **Frontend:** React.js, HTML, CSS
+* **Build Tool:** Maven
+* **Version Control:** Git & GitHub
+
+---
+
+## 🔐 Role-Based Access
+
+* **User:** Submit and track complaints
+* **Staff:** Manage assigned complaints
+* **Admin:** Control, assign, and monitor entire system
+
+Each role has a dedicated dashboard with specific functionalities.
+
+---
+
+## 🔄 Complaint Workflow
+
+* **OPEN** → Complaint submitted
+* **ASSIGNED** → Assigned to staff
+* **IN_PROGRESS** → Under processing
+* **RESOLVED** → Completed
+* **ESCALATED** → Marked for urgent attention
+
+---
+
+## 🚨 Escalation System
+
+* Admin can manually escalate complaints
+* Escalated complaints are highlighted with priority
+* Special tracking and alerts for escalated cases
+
+---
+
+## 📊 Key Modules
+
+### 📌 Complaint Management
+
+Handles complaint submission, assignment, and status updates
+
+### 📌 Status Tracker
+
+Visual progress indicator for complaint lifecycle
+
+### 📌 Timeline System
+
+Tracks all updates and actions on a complaint
+
+### 📌 Analytics Dashboard
+
+Displays statistics and charts for complaint data
+
+### 📌 Report Generation
+
+Export complaint data as CSV files
+
+---
+
+## 🗄️ Database Design
+
+Includes core tables:
+
+* Users
+* Complaints
+* Complaint History / Comments
+* Feedback
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Java 17+
+* Maven
+* MySQL
+* Node.js (for frontend)
+
+### Steps
+
+1. Clone the repository
+2. Configure database in application.properties
+3. Run backend (Spring Boot)
+4. Run frontend (React)
+5. Access at:
+   👉 http://localhost:8080
+
+---
+
+## 🔒 Security Features
+
+* Secure authentication using Spring Security
+* Password encryption with BCrypt
+* Role-based authorization
+* Protected API endpoints
+
+---
+
+## ⚠️ Notes
+
+* Escalation is manually triggered by admin
+* Separate sessions recommended for testing roles
+
+---
+
+## 🚀 Future Enhancements
+
+* Automatic SLA-based escalation
+* Real-time updates using WebSockets
+* Mobile-friendly UI
+* AI-based complaint categorization
+
+---
